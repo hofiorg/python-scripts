@@ -2,7 +2,7 @@
     "urls": [
       {
         "name": "example-com test url",
-        "url": "http://example.com",
+        "url": "http://example.com?value=$UUID",
         "contains": "Example Domain"
       },
       {

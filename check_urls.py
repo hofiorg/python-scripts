@@ -7,6 +7,7 @@ contains a specific string and prints the result using emojis to indicate succes
 import json
 import sys
 import requests
+import uuid
 
 def read_json_file(file_path):
     """Read and return the content of the JSON file using UTF-8 encoding."""
@@ -30,7 +31,7 @@ def check_urls(url_data):
         
         for item in url_data['urls']:
             name = item['name']
-            url = item['url']
+            url = item['url'].replace("$UUID", str(uuid.uuid4()))
             contains = item.get('contains', None)
             try:
                 response = requests.get(url, timeout=10)
