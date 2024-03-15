@@ -22,6 +22,7 @@ source myenv/bin/activate
 pip install pylint
 pip install requests
 pip install pytest pytest-cov pytest-html
+pip install -e .
 ```
 
 ### Lint

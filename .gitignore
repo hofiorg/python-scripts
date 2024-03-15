@@ -5,3 +5,4 @@ myenv/
 .coverage
 junit/
 .DS_Store
+*.egg-info/

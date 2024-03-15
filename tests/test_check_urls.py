@@ -8,9 +8,6 @@ from unittest.mock import patch
 from io import StringIO
 import json
 import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-# pylint: disable=wrong-import-position
 import check_urls
 
 class TestCheckUrls(unittest.TestCase):
