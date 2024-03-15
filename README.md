@@ -44,5 +44,5 @@ brew install python-requests
 ### Usage
 
 ```sh
-check_urls.py data/urls.json`
+check_urls.py data/urls.json
 ```
