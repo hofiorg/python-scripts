@@ -27,7 +27,6 @@ jobs:
         pip install pytest pytest-cov pytest-html
         pytest tests --doctest-modules --junitxml=junit/test-results.xml --html=junit/test-results.html
     - name: Archive junit test results
-      if: matrix.python-version == '3.12' #onyly run for the latest version
       uses: actions/upload-artifact@v4
       with:
         name: junit-test-results-python-${{ matrix.python-version }}
