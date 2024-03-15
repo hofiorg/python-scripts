@@ -48,7 +48,7 @@ def check_urls(url_data):
 if __name__ == "__main__":
     # Ensure a file path is provided
     if len(sys.argv) < 2:
-        print("Usage: ./check-urls.py <path_to_json_file>")
+        print("Usage: ./check_urls.py <path_to_json_file>")
         sys.exit(1)
 
     json_file_path = sys.argv[1]
