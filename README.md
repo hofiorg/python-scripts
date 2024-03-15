@@ -33,7 +33,7 @@ pylint check_urls.py tests/test_check_urls.py
 ### Test
 
 ```sh
-pytest tests --doctest-modules --junitxml=junit/test-results.xml --html=junit/test-results.html
+pytest tests --junitxml=junit/test-results.xml --html=junit/test-results.html
 ```
 
 ### Usage

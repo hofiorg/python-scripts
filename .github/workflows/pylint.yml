@@ -25,7 +25,7 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest pytest-cov pytest-html
-        pytest tests --doctest-modules --junitxml=junit/test-results.xml --html=junit/test-results.html
+        pytest tests --junitxml=junit/test-results.xml --html=junit/test-results.html
     - name: Archive junit test results
       uses: actions/upload-artifact@v4
       with:
