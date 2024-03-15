@@ -6,8 +6,8 @@ contains a specific string and prints the result using emojis to indicate succes
 
 import json
 import sys
-import requests
 import uuid
+import requests
 
 def read_json_file(file_path):
     """Read and return the content of the JSON file using UTF-8 encoding."""
@@ -28,26 +28,27 @@ def check_urls(url_data):
     """
     if 'urls' in url_data:
         max_name_length = max(len(item['name']) for item in url_data['urls'])
-        
+
         for item in url_data['urls']:
             name = item['name']
             url = item['url'].replace("$UUID", str(uuid.uuid4()))
             contains = item.get('contains', None)
+            name_url = f"{name:<{max_name_length}} - {url}"
             try:
                 response = requests.get(url, timeout=10)
                 if contains:
                     if contains in response.text:
-                        print(f"✅ {name:<{max_name_length}} - {url}")
+                        print(f"✅ {name_url}")
                     else:
-                        print(f"❌ {name:<{max_name_length}} - {url}")
+                        print(f"❌ {name_url}")
                 else:
                     # If 'contains' is not provided, check if the status code is 200
                     if response.status_code == 200:
-                        print(f"✅ {name:<{max_name_length}} - {url}")
+                        print(f"✅ {name_url}")
                     else:
-                        print(f"❌ {name:<{max_name_length}} - {url} - status {response.status_code}")
+                        print(f"❌ {name_url} - status {response.status_code}")
             except requests.RequestException as e:
-                print(f"❌ {name:<{max_name_length}} - {url} - failed to retrieve (error: {e})")
+                print(f"❌ {name_url} - failed to retrieve (error: {e})")
     else:
         print("No 'urls' key found in the JSON data.")
 
