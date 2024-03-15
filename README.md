@@ -29,22 +29,19 @@ contains a specific string and prints the result using emojis to indicate succes
 
 ### Installation
 
-#### Ubuntu with pip
-
-```sh
-pip install pylint
-pip install requests
-pip install pytest pytest-cov
-```
-
 #### Mac with Homebrew
 
 ```sh
 python3 -m venv myenv
 source myenv/bin/activate
+```
+
+#### Install modules with pip
+
+```sh
 pip install pylint
 pip install requests
-pip install pytest pytest-cov
+pip install pytest pytest-cov pytest-html
 ```
 
 ### Lint
@@ -56,7 +53,7 @@ pylint check_urls.py tests/test_check_urls.py
 ### Test
 
 ```sh
-pytest tests --doctest-modules --junitxml=junit/test-results.xml --cov-report=xml --cov-report=html
+pytest tests --doctest-modules --junitxml=junit/test-results.xml --html=junit/test-results.html
 ```
 
 ### Usage

@@ -4,3 +4,4 @@ myenv/
 .pytest_cache
 .coverage
 junit/
+.DS_Store
