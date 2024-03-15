@@ -12,8 +12,7 @@
       },
       {
         "name": "example-net",
-        "url": "http://example.net",
-        "contains": "Example Net"
+        "url": "http://example.net"
       }
     ]
   }  

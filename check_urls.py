@@ -21,20 +21,27 @@ def read_json_file(file_path):
         sys.exit(1)
 
 def check_urls(url_data):
-    """Check each URL for a specific string and print the result using emojis."""
+    """Check each URL for a specific string (or status 200 if 'contains' is not set) and print the result using emojis."""
     if 'urls' in url_data:
         for item in url_data['urls']:
             name = item['name']
             url = item['url']
-            contains = item['contains']
+            contains = item.get('contains', None)
             try:
                 response = requests.get(url, timeout=10)
-                if contains in response.text:
-                    print(f"✅ {name} - {url}")
+                if contains:
+                    if contains in response.text:
+                        print(f"✅ {name} - {url}")
+                    else:
+                        print(f"❌ {name} - {url}")
                 else:
-                    print(f"❌ {name} - {url}")
+                    # If 'contains' is not provided, check if the status code is 200
+                    if response.status_code == 200:
+                        print(f"✅ {name} - {url}")
+                    else:
+                        print(f"❌ {name} - {url} - status {response.status_code}")
             except requests.RequestException as e:
-                print(f"❌ {name}- {url} - failed to retrieve (error: {e})")
+                print(f"❌ {name} - {url} - failed to retrieve (error: {e})")
     else:
         print("No 'urls' key found in the JSON data.")
 
