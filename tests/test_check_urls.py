@@ -8,7 +8,7 @@ from unittest.mock import patch
 from io import StringIO
 import json
 import sys
-import check_urls
+from scripts import check_urls
 
 class TestCheckUrls(unittest.TestCase):
     """

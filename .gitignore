@@ -6,3 +6,4 @@ myenv/
 junit/
 .DS_Store
 *.egg-info/
+build/

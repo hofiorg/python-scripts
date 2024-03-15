@@ -17,14 +17,12 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pylint
-        pip install requests
+        pip install .
     - name: Analysing the code with pylint
       run: |
-        pylint $(git ls-files '*.py')
+        pylint scripts/*.py tests/*.py
     - name: Test with pytest
       run: |
-        pip install pytest pytest-cov pytest-html
         pytest tests --junitxml=junit/test-results.xml --html=junit/test-results.html
     - name: Archive junit test results
       uses: actions/upload-artifact@v4
