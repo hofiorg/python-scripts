@@ -26,6 +26,8 @@ def check_urls(url_data):
     and print the result using emojis.
     """
     if 'urls' in url_data:
+        max_name_length = max(len(item['name']) for item in url_data['urls'])
+        
         for item in url_data['urls']:
             name = item['name']
             url = item['url']
@@ -34,17 +36,17 @@ def check_urls(url_data):
                 response = requests.get(url, timeout=10)
                 if contains:
                     if contains in response.text:
-                        print(f"✅ {name:<20} - {url}")
+                        print(f"✅ {name:<{max_name_length}} - {url}")
                     else:
-                        print(f"❌ {name:<20} - {url}")
+                        print(f"❌ {name:<{max_name_length}} - {url}")
                 else:
                     # If 'contains' is not provided, check if the status code is 200
                     if response.status_code == 200:
-                        print(f"✅ {name:<20} - {url}")
+                        print(f"✅ {name:<{max_name_length}} - {url}")
                     else:
-                        print(f"❌ {name:<20} - {url} - status {response.status_code}")
+                        print(f"❌ {name:<{max_name_length}} - {url} - status {response.status_code}")
             except requests.RequestException as e:
-                print(f"❌ {name:<20} - {url} - failed to retrieve (error: {e})")
+                print(f"❌ {name:<{max_name_length}} - {url} - failed to retrieve (error: {e})")
     else:
         print("No 'urls' key found in the JSON data.")
 

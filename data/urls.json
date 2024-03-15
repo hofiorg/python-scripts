@@ -1,7 +1,7 @@
 {
     "urls": [
       {
-        "name": "example-com",
+        "name": "example-com test url",
         "url": "http://example.com",
         "contains": "Example Domain"
       },
