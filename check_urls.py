@@ -31,12 +31,14 @@ def check_urls(url_data):
 
         for item in url_data['urls']:
             name = item['name']
-            url = item['url'].replace("$UUID", str(uuid.uuid4()))
+            uuid_string = str(uuid.uuid4())
+            url = item['url'].replace("$UUID", uuid_string)
             contains = item.get('contains', None)
             name_url = f"{name:<{max_name_length}} - {url}"
             try:
                 response = requests.get(url, timeout=10)
                 if contains:
+                    contains = contains.replace("$UUID", uuid_string)
                     if contains in response.text:
                         print(f"✅ {name_url}")
                     else:
