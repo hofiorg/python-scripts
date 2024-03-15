@@ -31,17 +31,17 @@ def check_urls(url_data):
                 response = requests.get(url, timeout=10)
                 if contains:
                     if contains in response.text:
-                        print(f"✅ {name:<11} - {url}")
+                        print(f"✅ {name:<13} - {url}")
                     else:
-                        print(f"❌ {name:<11} - {url}")
+                        print(f"❌ {name:<13} - {url}")
                 else:
                     # If 'contains' is not provided, check if the status code is 200
                     if response.status_code == 200:
-                        print(f"✅ {name:<11} - {url}")
+                        print(f"✅ {name:<13} - {url}")
                     else:
-                        print(f"❌ {name:<11} - {url} - status {response.status_code}")
+                        print(f"❌ {name:<13} - {url} - status {response.status_code}")
             except requests.RequestException as e:
-                print(f"❌ {name:<11} - {url} - failed to retrieve (error: {e})")
+                print(f"❌ {name:<13} - {url} - failed to retrieve (error: {e})")
     else:
         print("No 'urls' key found in the JSON data.")
 
