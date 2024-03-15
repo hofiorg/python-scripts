@@ -1,26 +1,6 @@
 # Python Scripts [![Pylint and Pytest](https://github.com/hofiorg/python_scripts/actions/workflows/pylint.yml/badge.svg)](https://github.com/hofiorg/python_scripts/actions/workflows/pylint.yml)
 
-Hello World and other stuff.
-
-## [hello.py](./hello.py)
-
-simple hello world
-
-### Usage
-
-```sh
-hello.py
-```
-
-## [filter.py](./filter.py)
-
-lambda array filter example
-
-### Usage
-
-```sh
-filter.py
-```
+check_urls, hello_world and other stuff.
 
 ## [check_urls.py](./check_urls.py)
 
@@ -60,4 +40,24 @@ pytest tests --doctest-modules --junitxml=junit/test-results.xml --html=junit/te
 
 ```sh
 check_urls.py data/urls.json
+```
+
+## [filter_lambda.py](./filter_lambda.py)
+
+lambda function within filter to select fruits starting with "A" from a list
+
+### Usage
+
+```sh
+filter_lambda.py
+```
+
+## [hello_world.py](./hello_world.py)
+
+simple hello world
+
+### Usage
+
+```sh
+hello_world.py
 ```
