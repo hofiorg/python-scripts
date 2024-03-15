@@ -32,13 +32,19 @@ contains a specific string and prints the result using emojis to indicate succes
 #### Ubuntu with pip
 
 ```sh
+pip install pylint
 pip install requests
+pip install pytest pytest-cov
 ```
 
 #### Mac with Homebrew
 
 ```sh
-brew install python-requests
+python3 -m venv myenv
+source myenv/bin/activate
+pip install pylint
+pip install requests
+pip install pytest pytest-cov
 ```
 
 ### Lint
@@ -50,7 +56,7 @@ pylint check_urls.py tests/test_check_urls.py
 ### Test
 
 ```sh
-tests/test_check_urls.py
+pytest tests --doctest-modules --junitxml=junit/test-results.xml --cov-report=xml --cov-report=html
 ```
 
 ### Usage
