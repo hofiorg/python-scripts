@@ -21,7 +21,10 @@ def read_json_file(file_path):
         sys.exit(1)
 
 def check_urls(url_data):
-    """Check each URL for a specific string (or status 200 if 'contains' is not set) and print the result using emojis."""
+    """
+    Check each URL for a specific string (or status 200 if 'contains' is not set)
+    and print the result using emojis.
+    """
     if 'urls' in url_data:
         for item in url_data['urls']:
             name = item['name']
