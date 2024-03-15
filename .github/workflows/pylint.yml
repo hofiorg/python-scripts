@@ -20,7 +20,7 @@ jobs:
         pip install .
     - name: Analysing the code with pylint
       run: |
-        pylint scripts/*.py tests/*.py
+        pylint $(git ls-files '*.py')
     - name: Test with pytest
       run: |
         pytest tests --junitxml=junit/test-results.xml --html=junit/test-results.html

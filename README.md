@@ -25,7 +25,7 @@ pip install .
 ### Lint
 
 ```sh
-pylint scripts/check_urls.py tests/test_check_urls.py
+pylint $(git ls-files '*.py')
 ```
 
 ### Test
