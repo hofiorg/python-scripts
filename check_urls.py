@@ -27,7 +27,14 @@ def check_urls(url_data):
     and print the result using emojis.
     """
     if 'urls' in url_data:
-        max_name_length = max(len(item['name']) for item in url_data['urls'])
+        if not url_data['urls']:  # Check if the list is empty
+            print("No URLs to check.")
+            return
+        if url_data['urls']:
+            max_name_length = max(len(item['name']) for item in url_data['urls'])
+        else:
+            max_name_length = 0  # or some default value that makes sense for your use case
+
 
         for item in url_data['urls']:
             name = item['name']

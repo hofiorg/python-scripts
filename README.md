@@ -41,6 +41,18 @@ pip install requests
 brew install python-requests
 ```
 
+### Lint
+
+```sh
+pylint check_urls.py tests/test_check_urls.py
+```
+
+### Test
+
+```sh
+tests/test_check_urls.py
+```
+
 ### Usage
 
 ```sh
