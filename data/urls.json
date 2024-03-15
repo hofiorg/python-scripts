@@ -1,18 +1,18 @@
 {
-    "urls": [
-      {
-        "name": "example-com test url",
-        "url": "http://example.com?value=$UUID",
-        "contains": "Example Domain"
-      },
-      {
-        "name": "example",
-        "url": "https://example.org",
-        "contains": "More Examples"
-      },
-      {
-        "name": "example-net",
-        "url": "http://example.net"
-      }
-    ]
-  }  
+  "urls": [
+    {
+      "name": "example-com test url",
+      "url": "http://example.com?value=$UUID",
+      "contains": "Example Domain"
+    },
+    {
+      "name": "example",
+      "url": "https://example.org",
+      "contains": "More Examples"
+    },
+    {
+      "name": "example-net",
+      "url": "http://example.net"
+    }
+  ]
+}  
