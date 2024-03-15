@@ -1,4 +1,4 @@
-# Python Examples [![Pylint and Pytest](https://github.com/hofiorg/python_examples/actions/workflows/pylint.yml/badge.svg)](https://github.com/hofiorg/python_examples/actions/workflows/pylint.yml)
+# Python Scripts [![Pylint and Pytest](https://github.com/hofiorg/python_scripts/actions/workflows/pylint.yml/badge.svg)](https://github.com/hofiorg/python_scripts/actions/workflows/pylint.yml)
 
 Hello World and other stuff.
 
