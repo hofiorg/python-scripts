@@ -28,14 +28,11 @@ def check_urls(url_data):
     and print the result using emojis.
     """
     if 'urls' in url_data:
-        if not url_data['urls']:  # Check if the list is empty
+        if not url_data['urls']:
             print("No URLs to check.")
             return
         if url_data['urls']:
             max_name_length = max(len(item['name']) for item in url_data['urls'])
-        else:
-            max_name_length = 0  # or some default value that makes sense for your use case
-
 
         for item in url_data['urls']:
             name = item['name']
@@ -71,5 +68,4 @@ if __name__ == "__main__":
     json_file_path = sys.argv[1]
     json_data = read_json_file(json_file_path)
 
-    # Check URLs
     check_urls(json_data)
