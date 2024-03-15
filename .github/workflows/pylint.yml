@@ -26,3 +26,8 @@ jobs:
       run: |
         pip install pytest pytest-cov pytest-html
         pytest tests --doctest-modules --junitxml=junit/test-results.xml --html=junit/test-results.html
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v4
+      with:
+        name: code-coverage-report
+        path: junit/test-results.html   
