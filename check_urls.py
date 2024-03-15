@@ -24,16 +24,17 @@ def check_urls(url_data):
     """Check each URL for a specific string and print the result using emojis."""
     if 'urls' in url_data:
         for item in url_data['urls']:
+            name = item['name']
             url = item['url']
             contains = item['contains']
             try:
                 response = requests.get(url, timeout=10)
                 if contains in response.text:
-                    print(f"✅ {url} - contains specified string")
+                    print(f"✅ {name} - {url}")
                 else:
-                    print(f"❌ {url} - does not contain the specified string")
+                    print(f"❌ {name} - {url}")
             except requests.RequestException as e:
-                print(f"❌ {url} - failed to retrieve (error: {e})")
+                print(f"❌ {name}- {url} - failed to retrieve (error: {e})")
     else:
         print("No 'urls' key found in the JSON data.")
 

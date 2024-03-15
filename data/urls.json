@@ -1,14 +1,17 @@
 {
     "urls": [
       {
+        "name": "example-com",
         "url": "http://example.com",
         "contains": "Example Domain"
       },
       {
+        "name": "example-org",
         "url": "https://example.org",
         "contains": "More Examples"
       },
       {
+        "name": "example-net",
         "url": "http://example.net",
         "contains": "Example Net"
       }
