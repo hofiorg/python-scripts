@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-This module checks URLs defined in a JSON file. For each URL, it verifies if the response
+This script checks URLs defined in a JSON file. For each URL, it verifies if the response
 contains a specific string and prints the result using emojis to indicate success or failure.
 """
 

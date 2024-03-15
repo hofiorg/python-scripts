@@ -2,37 +2,37 @@
 
 check_urls, hello_world and other stuff.
 
-## [check_urls.py](./scripts/check_urls.py)
+## Installation
 
-This module checks URLs defined in a JSON file. For each URL, it verifies if the response
-contains a specific string and prints the result using emojis to indicate success or failure.
-
-### Installation
-
-#### Mac with Homebrew
+### Mac with Homebrew
 
 ```sh
 python3 -m venv myenv
 source myenv/bin/activate
 ```
 
-#### Install modules with pip
+### Install modules with pip
 
 ```sh
 pip install .
 ```
 
-### Lint
+## Lint
 
 ```sh
 pylint $(git ls-files '*.py')
 ```
 
-### Test
+## Test
 
 ```sh
 pytest tests --junitxml=junit/test-results.xml --html=junit/test-results.html
 ```
+
+## [check_urls.py](./scripts/check_urls.py)
+
+This script checks URLs defined in a JSON file. For each URL, it verifies if the response
+contains a specific string and prints the result using emojis to indicate success or failure.
 
 ### Usage
 
