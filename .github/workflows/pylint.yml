@@ -1,4 +1,4 @@
-name: Pylint and Pytest
+name: Pylint, Pytest and Build
 
 on: [push]
 
@@ -29,3 +29,5 @@ jobs:
       with:
         name: junit-test-results-python-${{ matrix.python-version }}
         path: junit
+    - name: Build package
+      run: python -m build

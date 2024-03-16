@@ -1,4 +1,4 @@
-# Python Scripts [![Pylint and Pytest](https://github.com/hofiorg/python_scripts/actions/workflows/pylint.yml/badge.svg)](https://github.com/hofiorg/python_scripts/actions/workflows/pylint.yml)
+# Python Scripts [![Pylint, Pytest and Build](https://github.com/hofiorg/python_scripts/actions/workflows/pylint.yml/badge.svg)](https://github.com/hofiorg/python_scripts/actions/workflows/pylint.yml)
 
 check_urls, hello_world and other stuff.
 
@@ -27,6 +27,12 @@ pylint $(git ls-files '*.py')
 
 ```sh
 pytest tests --junitxml=junit/test-results.xml --html=junit/test-results.html
+```
+
+## Build
+
+```sh
+python -m build
 ```
 
 ## [check_urls.py](./scripts/check_urls.py)

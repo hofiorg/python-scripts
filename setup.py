@@ -15,7 +15,8 @@ setup(
         'pytest',
         'pytest-cov',
         'pytest-html',
-        'setuptools'
+        'setuptools',
+        'build'
     ],
     scripts=[
         'scripts/check_urls.py',
