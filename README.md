@@ -7,7 +7,7 @@ check_urls, hello_world and other stuff.
 ### Mac with Homebrew
 
 ```sh
-python3 -m venv myenv
+python3.12 -m venv myenv
 source myenv/bin/activate
 ```
 
