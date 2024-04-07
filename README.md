@@ -40,7 +40,7 @@ python -m build
 This script checks URLs defined in a JSON file. For each URL, it verifies if the response
 contains a specific string and prints the result using emojis to indicate success or failure.
 
-### Usage
+### Usage check_url
 
 ```sh
 scripts/check_urls.py data/urls.json
@@ -50,7 +50,7 @@ scripts/check_urls.py data/urls.json
 
 lambda function within filter to select fruits starting with "A" from a list
 
-### Usage
+### Usage filter_lambda
 
 ```sh
 scripts/filter_lambda.py
@@ -60,7 +60,7 @@ scripts/filter_lambda.py
 
 simple hello world
 
-### Usage
+### Usage hello_world
 
 ```sh
 scripts/hello_world.py
