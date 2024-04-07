@@ -43,7 +43,7 @@ contains a specific string and prints the result using emojis to indicate succes
 ### Usage
 
 ```sh
-check_urls.py data/urls.json
+scripts/check_urls.py data/urls.json
 ```
 
 ## [filter_lambda.py](./scripts/filter_lambda.py)
@@ -53,7 +53,7 @@ lambda function within filter to select fruits starting with "A" from a list
 ### Usage
 
 ```sh
-filter_lambda.py
+scripts/filter_lambda.py
 ```
 
 ## [hello_world.py](./scripts/hello_world.py)
@@ -63,5 +63,5 @@ simple hello world
 ### Usage
 
 ```sh
-hello_world.py
+scripts/hello_world.py
 ```
