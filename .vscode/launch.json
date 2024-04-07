@@ -5,12 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "check_urls.py ~/urls.json",
+            "name": "check_urls.py data/urls.json",
             "type": "debugpy",
             "request": "launch",
             "program": "scripts/check_urls.py",
             "console": "integratedTerminal",
-            "args": "~/urls.json"
+            "args": "data/urls.json"
         }
     ]
 }
