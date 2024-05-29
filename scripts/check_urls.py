@@ -31,6 +31,7 @@ def check_urls(url_data):
         if not url_data['urls']:
             print("No URLs to check.")
             return
+        max_name_length = 15 # default length
         if url_data['urls']:
             max_name_length = max(len(item['name']) for item in url_data['urls'])
 
