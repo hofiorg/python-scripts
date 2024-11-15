@@ -4,12 +4,9 @@ check_urls, hello_world and other stuff.
 
 ## Installation
 
-### Mac with Homebrew
+### Mac with Pyenv
 
-```sh
-python3.12 -m venv myenv
-source myenv/bin/activate
-```
+<https://stackoverflow.com/a/71657414>
 
 ### Install modules with pip
 
