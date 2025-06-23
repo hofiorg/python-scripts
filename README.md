@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Pylint, Pytest and Build](https://github.com/hofiorg/python_scripts/actions/workflows/pylint.yml/badge.svg)](https://github.com/hofiorg/python_scripts/actions/workflows/pylint.yml)
+[![Pylint, Pytest and Build](https://github.com/hofiorg/python-scripts/actions/workflows/pylint.yml/badge.svg)](https://github.com/hofiorg/python-scripts/actions/workflows/pylint.yml)
 
 A collection of small Python scripts including:
 - [check_urls.py](./scripts/check_urls.py)
